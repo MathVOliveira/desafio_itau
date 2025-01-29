@@ -1,13 +1,13 @@
 package com.transaction.desafio.dto;
 
-public class EstatisticaDTO {
+public class StatisticDTO {
     private Long count;
     private Double sum;
     private Double avg;
     private Double min;
     private Double max;
 
-    public EstatisticaDTO(Long count, Double sum, Double avg, Double min, Double max) {
+    public StatisticDTO(Long count, Double sum, Double avg, Double min, Double max) {
         this.count = count;
         this.sum = sum;
         this.avg = avg;

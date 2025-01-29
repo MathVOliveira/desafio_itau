@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import java.time.OffsetDateTime;
 
 @RequiredArgsConstructor
-public class TransacaoDTO {
+public class TransactionDTO {
 
     private Double valor;
     private OffsetDateTime dataHora;
