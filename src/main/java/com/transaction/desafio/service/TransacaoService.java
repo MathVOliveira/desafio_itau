@@ -19,6 +19,10 @@ public class TransacaoService {
         transacoes.add(transacaoDTO);
     }
 
+    public void deleteTransacoes() {
+        transacoes.clear();
+    }
+
     // add transaction validation
     private void validacaoTransacaoDTO(TransacaoDTO transacaoDTO) {
         if (transacaoDTO.getDataHora().isAfter(OffsetDateTime.now())) {
