@@ -23,6 +23,14 @@ public class TransacaoService {
         transacoes.clear();
     }
 
+    public List<TransacaoDTO> getTransacoes(Integer seconds) {
+        OffsetDateTime gap = OffsetDateTime.now().minusSeconds(seconds);
+        return transacoes
+                .stream()
+                .filter(transacao -> transacao.getDataHora().isAfter(gap))
+                .toList();
+    }
+
     // add transaction validation
     private void validacaoTransacaoDTO(TransacaoDTO transacaoDTO) {
         if (transacaoDTO.getDataHora().isAfter(OffsetDateTime.now())) {
